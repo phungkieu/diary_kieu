@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c2e4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Single Day', cursive; 
+    font-size: 50px; /* Thay đổi kích thước chữ */
+    font-weight: bold; /* Đặt độ đậm cho chữ */
+    color: #064daa;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #99d8f7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="range"] {
+    width: 100%;
+}
+
+.form-group span {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.form-group.time-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group.time-group label {
+    margin-right: 10px;
+    flex-shrink: 0.50; /* Ngăn không cho label bị thu gọn */
+}
+
+.form-group.time-group input {
+    flex: 1; /* Input sẽ chiếm hết không gian còn lại */
+    max-width: 150px; /* Giới hạn chiều rộng tối đa của input */
+}
+
+.form-group.time-group span {
+    margin: 0 5px; /* Khoảng cách giữa hai input */
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #064daa;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #064daa;
+}

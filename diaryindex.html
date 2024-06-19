@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>운동 기록</title>
+        <link rel="stylesheet" href="diarystyles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>운동 기록</h1>
+        <form id="workoutForm">
+            <div class="form-group">
+                <label for="date">날짜:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">시간:</label>
+            </div>
+            <div class="form-group time-group">
+                <input type="time" id="startTime" name="startTime" required>
+                <span>~</span>
+                <input type="time" id="endTime" name="endTime" required>
+            </div>
+            <div class="form-group">
+                <label for="location">운동 장소:</label>
+                <input type="text" id="location" name="location" placeholder="예: 헬스장, 집, 공원" required>
+            </div>
+            <div class="form-group">
+                <label for="workoutType">운동 종류:</label>
+                <select id="workoutType" name="workoutType" required>
+                    <option value="running">러닝</option>
+                    <option value="weight_training">웨이트 트레이닝</option>
+                    <option value="yoga">요가</option>
+                    <option value="cycling">사이클링</option>
+                    <option value="other">기타</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>운동:</label>
+                <input type="text" name="exerciseName" placeholder="예: 스쿼트" required>
+                <label>세트:</label>
+                <input type="number" name="sets" placeholder="예: 3" required>
+                <label>반복:</label>
+                <input type="number" name="reps" placeholder="예: 10" required>
+            </div>
+            <div class="form-group">
+                <label>운동 부위:</label>
+                <label><input type="checkbox" name="bodyPart" value="upper_body"> 상체</label>
+                <label><input type="checkbox" name="bodyPart" value="lower_body"> 하체</label>
+                <label><input type="checkbox" name="bodyPart" value="full_body"> 전신</label>
+            </div>
+            <div class="form-group">
+                <label for="duration">운동 시간:</label>
+                <input type="text" id="duration" name="duration" placeholder="예: 60:00" required>
+            </div>
+            <div class="form-group">
+                <label for="distance">거리:</label>
+                <input type="text" id="distance" name="distance" placeholder="예: 5km">
+            </div>
+            <div class="form-group">
+                <label for="calories">칼로리 소모:</label>
+                <input type="text" id="calories" name="calories" placeholder="예: 500kcal" required>
+            </div>
+            <div class="form-group">
+                <label for="moodBefore">기분 상태 (운동 전):</label>
+                <select id="moodBefore" name="moodBefore" required>
+                    <option value="good">좋음</option>
+                    <option value="average">보통</option>
+                    <option value="bad">나쁨</option>
+                </select>
+                <label for="moodAfter">기분 상태 (운동 후):</label>
+                <select id="moodAfter" name="moodAfter" required>
+                    <option value="good">좋음</option>
+                    <option value="average">보통</option>
+                    <option value="bad">나쁨</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fatigue">피로도:</label>
+                <input type="range" id="fatigue" name="fatigue" min="0" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="sleep">수면 시간:</label>
+                <input type="text" id="sleep" name="sleep" placeholder="예: 7시간" required>
+            </div>
+            <div class="form-group">
+                <label for="injury">부상 여부:</label>
+                <select id="injury" name="injury" required>
+                    <option value="none">없음</option>
+                    <option value="yes">있음</option>
+                </select>
+                <input type="text" id="injuryDetail" name="injuryDetail" placeholder="부상 부위" style="display:none;">
+            </div>
+            <div class="form-group">
+                <label for="goal">운동 목표:</label>
+                <input type="text" id="goal" name="goal" placeholder="예: 스쿼트 10회 3세트 완수" required>
+            </div>
+            <div class="form-group">
+                <label for="achievement">성취도:</label>
+                <select id="achievement" name="achievement" required>
+                    <option value="achieved">달성</option>
+                    <option value="not_achieved">미달성</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">특이 사항:</label>
+                <textarea id="notes" name="notes" placeholder="예: 스쿼트 시 무릎 통증이 약간 있었음"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="partner">운동 파트너:</label>
+                <input type="text" id="partner" name="partner" placeholder="예: 없음">
+            </div>
+            <button type="submit">저장</button>
+        </form>
+    </div>
+    <script src="diaryscript.js"></script>
+</body>
+</html>
